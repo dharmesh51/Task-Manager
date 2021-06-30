@@ -1,3 +1,4 @@
+
 // Parent element to store  new card
 const taskContainer = document.querySelector('.task_container');
 
@@ -6,7 +7,7 @@ const taskContainer = document.querySelector('.task_container');
 let globalStore = []; // declaring an empty array to store data
 
 // new card template
-const newCard = ({id,ImageUrl,TaskTitle,TaskType,TasKDescription}) =>`<div class="col col-md-6 col-lg-4 id=${id} ">
+const newCard = ({id,ImageUrl,TaskTitle,TaskType,TasKDescription,TaskLink}) =>`<div class="col col-md-6 col-lg-4 id=${id} ">
 <div class="card m-2 ">
   <div class="card-header  d-flex justify-content-end gap-2 " >
     <button type="button" class="btn btn-outline-success edit_button" id=${id} onclick="editCard.apply(this, arguments)"><i class="far fa-edit" id=${id} onclick="editCard.apply(this, arguments)"></i></button>
@@ -19,7 +20,7 @@ const newCard = ({id,ImageUrl,TaskTitle,TaskType,TasKDescription}) =>`<div class
     <span class="mybadge bg-success"  id="type">${TaskType}</span>
   </div>
   <div class="card-footer  text-muted ">
-    <button type="button" id=${id} class="btn btn-outline-success float-end opentask">Open task</button>
+    <a href="${TaskLink}"type="button" id=${id} class="btn btn-outline-success float-end opentask">Open task</a>
   </div>
 </div>
 </div>`;
@@ -59,9 +60,10 @@ const Savechanges = () =>{
         ImageUrl:document.getElementById('imageurl').value,
         TaskTitle:document.getElementById('tasktitle').value,
         TaskType:document.getElementById('tasktype').value,
-        TasKDescription:document.getElementById('taskdescription').value
+        TasKDescription:document.getElementById('taskdescription').value,
+        TaskLink:document.getElementById('projectlink').value
     };
-    
+    // console.log(taskData);
     // HTML DOM
     const creatNewCard = newCard(taskData);
     //For Insert new card.Here "beforend" is the position parent is container
