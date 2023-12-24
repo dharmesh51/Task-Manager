@@ -189,8 +189,7 @@ const saveEditChanges = (event) => {
 };
 
 const testPRCode = (num1, num2) => {
-  let num3 = num1 + num2;
-  return num3;
+  return num1 + num2;
 };
 
 
