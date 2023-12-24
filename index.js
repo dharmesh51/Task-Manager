@@ -188,9 +188,7 @@ const saveEditChanges = (event) => {
 
 };
 
-const testPRCode = (num1, num2) => {
-  return num1 + num2;
-};
+const testPRCode = (num1, num2) => num1 + num2;
 
 
 
