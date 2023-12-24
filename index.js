@@ -188,7 +188,7 @@ const saveEditChanges = (event) => {
 
 };
 
-const valueCheck = (num1, num2) => {
+export const valueCheck = (num1, num2) => {
   if (num1 > num2) {
     return "Num1 is Bigger then Num2";
   }
