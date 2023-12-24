@@ -189,15 +189,7 @@ const saveEditChanges = (event) => {
 };
 
 const testPRCode = (num1, num2) => {
-  num1 = 23;
-  num2 = 24;
   var num3 = num1 + num2;
-  if (num3 > 100) {
-    num3 = 25;
-  }
-  console.log("Hiiiiiiiiiiii");
-  console.log("==================");
-  
 };
 
 
